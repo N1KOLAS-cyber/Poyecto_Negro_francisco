@@ -10,13 +10,7 @@
 3. c
 
 <!--
-comentarios
-aljshdkasjhdla
-sdasdasd
-asdasdas
-dasdasd
-asdasdasd
-asd
+comentarios , una mini plantilla de varias cosas que se pueden hacer para la insertacion de imagenes despues lo subo cualquier cosa avisen
 -->
 
 **negritas**
