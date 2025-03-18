@@ -1,8 +1,0 @@
-
-
-Descripción:
-
-
-El Ordenamiento por Inserción (Insertion Sort) es un método sencillo para organizar una lista de elementos. Su funcionamiento se asemeja a la manera en que ordenarías un conjunto de cartas en tu mano: tomando una por una y colocándolas en el lugar adecuado según su valor.
-
-El algoritmo recorre la lista de manera secuencial, seleccionando cada elemento y comparándolo con los que ya han sido organizados, insertándolo en la posición correcta dentro de la parte ordenada. A medida que avanza, la sección ordenada de la lista crece hasta abarcar todos los elementos, logrando así el orden deseado.
