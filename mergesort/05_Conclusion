@@ -1,0 +1,14 @@
+El algoritmo de ordenamiento Merge Sort es una implementación basada en el paradigma "divide y vencerás", 
+lo que le permite dividir el problema en subproblemas más pequeños para luego combinarlos en una solución ordenada. 
+Su complejidad temporal de O(n log n) lo convierte en una opción eficiente para ordenar grandes volúmenes de datos, 
+superando a otros algoritmos como Bubble Sort o Insertion Sort en términos de rendimiento.
+
+Una de sus principales ventajas es que es un algoritmo estable, lo que significa que conserva el orden relativo de elementos iguales, 
+y es especialmente útil cuando se trabaja con estructuras de datos como listas enlazadas. Sin embargo, su principal inconveniente es el uso adicional de memoria (O(n)), 
+ya que requiere almacenamiento auxiliar para la fusión de sublistas.
+
+En conclusión, Merge Sort es una opción eficiente y confiable para ordenar datos, 
+especialmente cuando se prioriza la estabilidad del ordenamiento. 
+No obstante, en escenarios con restricciones de memoria, 
+puede ser recomendable considerar alternativas como Quick Sort, 
+que generalmente ofrece un mejor rendimiento en la práctica para la mayoría de los casos.
