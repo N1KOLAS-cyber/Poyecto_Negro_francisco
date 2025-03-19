@@ -1,4 +1,8 @@
-
+Equipo:
+- Luis Enrique Ramos Diaz
+- José Enrique Castañeda Náhuat
+- Esteban José Priego Moguel
+- Rodrigo González Tovar
 
 Descripción:
 
