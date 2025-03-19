@@ -7,3 +7,9 @@ Quicksort es un algoritmo de ordenamiento ampliamente utilizado debido a su efic
 2. **Partición**: Se reorganizan los elementos de modo que los menores que el pivote queden a su izquierda y los mayores a su derecha.
 3. **Recursión**: Se aplica Quicksort recursivamente a las dos sublistas generadas.
 4. **Combinación**: Como cada sublista se ordena de forma independiente, al final se obtiene la lista completamente ordenada.
+
+Quicksort, análisis elaborado por:
+Castillo Andrés,
+Flores Fernely,
+Kantún Everth,
+Vecino Liliana.
