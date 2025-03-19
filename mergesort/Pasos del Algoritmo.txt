@@ -1,0 +1,56 @@
+--1. Inicio: Comenzamos con una lista desordenada:
+lista = [38, 27, 43, 3, 9, 82, 10]
+
+--2. División:
+Dividimos la lista en dos mitades de forma recursiva hasta que cada sublista tenga un solo elemento.
+
+def merge_sort(arr):
+    if len(arr) > 1:
+        mid = len(arr) // 2  # Encuentra el punto medio
+        left = arr[:mid]  # Divide en dos mitades
+        right = arr[mid:]
+
+        merge_sort(left)  # Llamada recursiva a la mitad izquierda
+        merge_sort(right)  # Llamada recursiva a la mitad derecha
+
+--3. Fusión:
+Comenzamos a combinar las sublistas ordenadas en una lista más grande, comparando los elementos de ambas mitades y colocando el menor primero.
+
+
+        i = j = k = 0
+
+        while i < len(left) and j < len(right):
+            if left[i] <= right[j]:  # Compara elementos
+                arr[k] = left[i]
+                i += 1
+            else:
+                arr[k] = right[j]
+                j += 1
+            k += 1
+
+        while i < len(left):  # Si quedan elementos en la izquierda
+            arr[k] = left[i]
+            i += 1
+            k += 1
+
+        while j < len(right):  # Si quedan elementos en la derecha
+            arr[k] = right[j]
+            j += 1
+            k += 1
+
+--4. Repetición:
+Se repiten los pasos de dividir y mezclar hasta que la lista esté completamente ordenada.
+
+lista = [38, 27, 43, 3, 9, 82, 10]
+merge_sort(lista)
+
+--5. Fin:
+Imprimimos la lista ordenada.
+
+print("Lista ordenada:", lista)
+
+
+Salida esperada:
+
+Lista ordenada: [3, 9, 10, 27, 38, 43, 82]
+
