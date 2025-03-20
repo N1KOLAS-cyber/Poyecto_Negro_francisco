@@ -1,4 +1,4 @@
-=== **Pseudocodigo del Algoritmo de Recorrido Merge Sort** ===
+**Pseudocodigo del Algoritmo de Recorrido Merge Sort**
 
 Funcion MergeSort(lista)  
     Si longitud(lista) > 1 Entonces  
@@ -56,7 +56,6 @@ def merge_sort(arr):
 --3. Fusión:
 Comenzamos a combinar las sublistas ordenadas en una lista más grande, comparando los elementos de ambas mitades y colocando el menor primero.
 
-
         i = j = k = 0
 
         while i < len(left) and j < len(right):
@@ -88,7 +87,6 @@ merge_sort(lista)
 Imprimimos la lista ordenada.
 
 print("Lista ordenada:", lista)
-
 
 Salida esperada:
 
@@ -122,33 +120,67 @@ Fusión de [7] y [8]: → [7, 8]
 Fusión de [5, 6] y [7, 8]: → [5, 6, 7, 8]
 Fusión final de [1, 2, 3, 4] y [5, 6, 7, 8]: → [1, 2, 3, 4, 5, 6, 7, 8]
 
-=== **Ejemplo** ===
+**Pseudocodigo del Algoritmo de Recorrido Merge Sort**
 
---Ejemplo 2: Peor de los casos
-(Cuando el arreglo está completamente en orden inverso, lo que genera el máximo número de comparaciones y movimientos.)
+Funcion MergeSort(lista) Si longitud(lista) \> 1 Entonces medio \<-
+longitud(lista) / 2 izquierda \<- lista\[0:medio\] derecha \<-
+lista\[medio:fin\]
 
-Arreglo inicial: [8, 7, 6, 5, 4, 3, 2, 1]
+MergeSort(izquierda) MergeSort(derecha)
 
-Paso 1: División
-Dividimos el arreglo en dos mitades:
+i \<- 0, j \<- 0, k \<- 0
 
-Mitad izquierda: [8, 7, 6, 5]
-Mitad derecha: [4, 3, 2, 1]
-División recursiva de la mitad izquierda:
+Mientras i \< longitud(izquierda) y j \< longitud(derecha) Hacer Si
+izquierda\[i\] \<= derecha\[j\] Entonces lista\[k\] \<- izquierda\[i\] i
+\<- i + 1 Sino lista\[k\] \<- derecha\[j\] j \<- j + 1 FinSi k \<- k + 1
+FinMientras
 
-[8, 7, 6, 5] → [8, 7] y [6, 5]
-[8, 7] → [8] y [7]
-[6, 5] → [6] y [5]
-División recursiva de la mitad derecha:
+Mientras i \< longitud(izquierda) Hacer lista\[k\] \<- izquierda\[i\] i
+\<- i + 1 k \<- k + 1 FinMientras
 
-[4, 3, 2, 1] → [4, 3] y [2, 1]
-[4, 3] → [4] y [3]
-[2, 1] → [2] y [1]
-Paso 2: Fusión
-Fusión de [8] y [7]: → [7, 8]
-Fusión de [6] y [5]: → [5, 6]
-Fusión de [7, 8] y [5, 6]: → [5, 6, 7, 8]
-Fusión de [4] y [3]: → [3, 4]
-Fusión de [2] y [1]: → [1, 2]
-Fusión de [3, 4] y [1, 2]: → [1, 2, 3, 4]
-Fusión final de [5, 6, 7, 8] y [1, 2, 3, 4]: → [1, 2, 3, 4, 5, 6, 7, 8]
+Mientras j \< longitud(derecha) Hacer lista\[k\] \<- derecha\[j\] j \<-
+j + 1 k \<- k + 1 FinMientras FinSi FinFuncion
+
+paso del algoritmo
+
+\--1. Inicio: Comenzamos con una lista desordenada: lista = \[38, 27,
+43, 3, 9, 82, 10\]
+
+\--2. División: Dividimos la lista en dos mitades de forma recursiva
+hasta que cada sublista tenga un solo elemento.
+
+def merge_sort(arr): if len(arr) \> 1: mid = len(arr) // 2 \# Encuentra
+el punto medio left = arr\[:mid\] \# Divide en dos mitades right =
+arr\[mid:\]
+
+merge_sort(left) \# Llamada recursiva a la mitad izquierda
+merge_sort(right) \# Llamada recursiva a la mitad derecha
+
+\--3. Fusión: Comenzamos a combinar las sublistas ordenadas en una lista
+más grande, comparando los elementos de ambas mitades y colocando el
+menor primero.
+
+i = j = k = 0
+
+while i \< len(left) and j \< len(right): if left\[i\] \<= right\[j\]:
+\# Compara elementos arr\[k\] = left\[i\] i += 1 else: arr\[k\] =
+right\[j\] j += 1 k += 1
+
+while i \< len(left): \# Si quedan elementos en la izquierda arr\[k\] =
+left\[i\] i += 1 k += 1
+
+while j \< len(right): \# Si quedan elementos en la derecha arr\[k\] =
+right\[j\] j += 1 k += 1
+
+\--4. Repetición: Se repiten los pasos de dividir y mezclar hasta que la
+lista esté completamente ordenada.
+
+lista = \[38, 27, 43, 3, 9, 82, 10\] merge_sort(lista)
+
+\--5. Fin: Imprimimos la lista ordenada.
+
+print(\"Lista ordenada:\", lista)
+
+Salida esperada:
+
+Lista ordenada: \[3, 9, 10, 27, 38, 43, 82\]
